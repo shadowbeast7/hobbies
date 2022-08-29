@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let x of myhobby; let i = index">
+        <button type="button" class="btn btn-danger btn-sm me-2" (click)="delhobby(i)">Delete</button>
+        <button type="button" class="btn btn-info btn-sm" (click)="afav(i)">Add To Fav</button> &nbsp;
+    <b>{{x.Name}}</b> &nbsp; &nbsp; <div> {{x.desc |mypipe:40}}</div> <div><b>Indian Phone No :</b> {{x.phoneno}}</div> <div><b>Us Phone No :</b> {{x.phoneno | phoneFormat}}</div>
+    </li>
+</ul>

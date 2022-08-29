@@ -1,0 +1,94 @@
+<!-- <body>
+{{title}}
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Hobbies</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+  </li>
+  
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><b>My Hobbies Are</b></div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Profile</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">Contact</div>
+
+  
+</div>
+
+<div><input type="text" #hobby (keyup.enter)="addhobby(hobby.value);hobby.value=''"></div><br>
+
+<div *ngFor="let x of hobbies">
+  {{x}}
+</div> -->
+
+
+
+<!-- Attribute Binding Example -->
+<!-- <table class="table table-border">
+  <tr><td>s1</td><td [attr.colspn]="col">Name</td></tr>
+
+  <tr>
+    <td>
+
+        *** Class Binding Examlpe ***      
+      <ul class="list-group">
+        <li class="list-group-item">Link1</li>
+        <li class="list-group-item" [class.active]="isActive">Link2</li>
+        <li class="list-group-item">Link3</li>
+      </ul>
+
+    </td>
+  </tr> -->
+
+
+<!-- </table> -->
+
+
+<!-- style binding example -->
+<!-- <div style="background-color: aqua;" [style.color]="isActive?'blue':'red'" (click)="test($event);">Testing</div> -->
+
+
+
+<!--Event Filtering Example-->
+<!-- <input type="text" class="form-control" (keyup.enter)="test($event);">
+{{invalue | currency:'INR'}} -->
+
+<!-- <input type="text" class="form-control" (keyup.enter)="test($event);">
+{{invalue | currency:'INR'}}
+<input type="text" [(ngModel)]="data" (keyup.enter)="test1($event);"><br>
+{{data | currency: 'INR'}}
+<button class="btn btn-info">Fetch</button> -->
+
+
+
+
+<!-- </body> -->
+
+
+
+<!-- Day 3 -->
+
+
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#" (click)="updatelnk('hobby')">Hobby</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="updatelnk('addhobby')">AddHobby</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="updatelnk('fav')">My Favourites</a>
+  </li>
+
+</ul>
+
+<!-- <a href="#" (click)="updatelnk('hobby')">Hobby</a> | <a href="#" (click)="updatelnk('addhobby')">AddHobby</a> | <a href="#" (click)="updatelnk('fav')">My Favourites</a> -->
+<app-home [msg]="lnk" [hobbylist]="hobbies" (newhobby)="addhobby($event)" (remhobby)="delhobby($event)"
+  (addfav)="addtofav($event)" [myfav]="favhobby" (uhfav)="unfav($event)"></app-home>

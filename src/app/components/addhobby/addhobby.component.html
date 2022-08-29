@@ -1,0 +1,2 @@
+<label for="newhobby">New hobby</label>
+<input [appMydir] #hobby type="text" class="form-control" id="newhobby" (keyup.enter)="addhobby(hobby.value); hobby.value=''" />

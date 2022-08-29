@@ -1,0 +1,15 @@
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let x of myhobby; let i = index">
+        <button type="button" class="btn btn-danger btn-sm" (click)="unfav(i)">UnFav</button> &nbsp;
+        {{x.Name}}
+        
+    </li>
+</ul>
+
+
+<!-- <ul class="item-group">
+    <li class="item-group-list" *ngFor="let x of 
+    myhobby; let i = index">{{x.Name}}  {{' '}}<button type="button" class="btn btn-danger">UnFav</button></li>
+   
+</ul> -->
