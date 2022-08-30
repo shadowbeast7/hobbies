@@ -8,3 +8,10 @@
     <app-myfav [myhobby]="myfav" (ufav)="unfavh($event)"></app-myfav>
 </div>
 
+<div *ngIf=" msg == 'contact'">
+    <app-contactus></app-contactus>
+</div>
+<div *ngIf=" msg == 'user'">
+    <app-user></app-user>
+</div>
+

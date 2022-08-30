@@ -14,6 +14,8 @@ import { MypipePipe } from './pipes/mypipe.pipe';
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 import { MydirDirective } from './directives/mydir.directive';
 import { PhoneDirective } from './directives/phone.directive';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { UserComponent } from './components/user/user.component';
 
 
 
@@ -30,6 +32,8 @@ import { PhoneDirective } from './directives/phone.directive';
     PhoneFormatPipe,
     MydirDirective,
     PhoneDirective,
+    ContactusComponent,
+    UserComponent,
    
  
   ],
